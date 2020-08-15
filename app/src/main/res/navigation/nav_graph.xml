@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/logoTriviaFragment"
+        android:name="com.crisspian.logotrivia.LogoTriviaFragment"
+        android:label="fragment_logo_trivia"
+        tools:layout="@layout/fragment_logo_trivia" >
+        <action
+            android:id="@+id/action_logoTriviaFragment_to_winFragment"
+            app:destination="@id/winFragment" />
+        <action
+            android:id="@+id/action_logoTriviaFragment_to_tryAgainFragment"
+            app:destination="@id/tryAgainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.crisspian.logotrivia.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_logoTriviaFragment"
+            app:destination="@id/logoTriviaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tryAgainFragment"
+        android:name="com.crisspian.logotrivia.TryAgainFragment"
+        android:label="fragment_try_again"
+        tools:layout="@layout/fragment_try_again" >
+        <action
+            android:id="@+id/action_tryAgainFragment_to_logoTriviaFragment"
+            app:destination="@id/logoTriviaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/winFragment"
+        android:name="com.crisspian.logotrivia.WinFragment"
+        android:label="fragment_win"
+        tools:layout="@layout/fragment_win" >
+        <action
+            android:id="@+id/action_winFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
+</navigation>
